@@ -14,7 +14,7 @@ def saludo(nombre):
     return f"hola, {nombre}"
 
 @app.route('/Saludar1/<Apellido>')
-def saludo1(Apellido):
+def saludo1(apellido):
     return f"Su apellido es: , {Apellido}"
 
 app.run()
