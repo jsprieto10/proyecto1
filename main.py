@@ -10,5 +10,8 @@ def hello_world():
 def saludo(nombre):
     return f"hola, {nombre}"
 
+@app.route('/Saludar1/<Apellido>')
+def saludo1(Apellido):
+    return f"Su apellido es: , {Apellido}"
 
 app.run()
