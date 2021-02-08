@@ -5,6 +5,9 @@ app = Flask(__name__)
 def hello_world():
     return 'Hola mundo y yirleny y anyi!'
 
+@app.route('/cambio')
+def git():
+    return 'Aprendiendo andamos!'
 
 @app.route('/saludar/<nombre>')
 def saludo(nombre):
