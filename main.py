@@ -9,12 +9,8 @@ def hello_world():
 def git():
     return 'Aprendiendo andamos!'
 
-@app.route('/saludar/<nombre>')
-def saludo(nombre):
-    return f"hola, {nombre}"
-
-@app.route('/Saludar1/<Apellido>')
-def saludo1(apellido):
-    return f"Su apellido es: , {Apellido}"
-
+@app.route('/saludar')
+def saludar():
+    return 'Hola chicos, desatrasandome estoy!'
+    
 app.run()
