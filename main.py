@@ -37,4 +37,15 @@ def crear_pelicula():
     conn.commit()
     return {"respuesta": "ok"}
 
+@app.route('/pelicula/<nombre>', methods=['DELETE'])
+def borrar_pelicula(nombre):
+    
+    conn = sqlite3.connect('peliculas.db')
+
+    c = conn.cursor()
+    # Insert a row of data
+    c.execute("DELETE FROM pelicula where nombre=?", [nombre])
+    conn.commit()
+    return {"respuesta": "ok"}
+
 app.run(debug=True)
