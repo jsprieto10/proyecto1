@@ -1,4 +1,6 @@
-from flask import Flask
+from flask import Flask, request
+import sqlite3
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -21,5 +23,18 @@ def saludar():
 @app.route('/saludar/<nombre>')
 def saludar_nombre(nombre):
     return f'<h2>Hola {nombre}!</h2> <p>Ya pudiste bajar mis cambios en el repo :)</p>'
+
+@app.route('/pelicula', methods=['POST'])
+def crear_pelicula():
     
-app.run()
+    conn = sqlite3.connect('peliculas.db')
+    body = request.json
+    
+    c = conn.cursor()
+    # Insert a row of data
+    c.execute("INSERT INTO pelicula VALUES (?,?,?,?)", (body["nombre"], body["calificacion"], body["duracion"], body["año"]))
+
+    conn.commit()
+    return {"respuesta": "ok"}
+
+app.run(debug=True)
