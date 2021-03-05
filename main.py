@@ -1,6 +1,8 @@
 from flask import Flask, request
 import sqlite3
 
+conn = sqlite3.connect('pelicula.db')
+conn = sqlite3.connect('canciones.db')
 app = Flask(__name__)
 
 @app.route('/')
@@ -47,5 +49,31 @@ def borrar_pelicula(nombre):
     c.execute("DELETE FROM pelicula where nombre=?", [nombre])
     conn.commit()
     return {"respuesta": "ok"}
+
+
+@app.route('/canciones', methods=['POST'])
+def crear_canciones():
+    
+    conn = sqlite3.connect('canciones.db')
+    body = request.json
+    
+    c = conn.cursor()
+    # Insert a row of data
+    c.execute("INSERT INTO canciones VALUES (?,?,?,?)", (body["nombre"], body["duracion"], body["album"], body["año"]))
+
+    conn.commit()
+    return {"respuestas": "oky"}
+
+@app.route('/canciones/<nombre>', methods=['DELETE'])
+def borrar_canciones(nombre):
+    
+    conn = sqlite3.connect('canciones.db')
+
+    c = conn.cursor()
+    # Insert a row of data
+    c.execute("DELETE FROM canciones where nombre=?", [nombre])
+    conn.commit()
+    return {"respuestas": "oky"}
+
 
 app.run(debug=True)
