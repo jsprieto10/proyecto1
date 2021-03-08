@@ -76,4 +76,31 @@ def borrar_canciones(nombre):
     return {"respuestas": "oky"}
 
 
+@app.route('/videos', methods=['POST'])
+def crear_videos():
+
+    conn = sqlite3.connect('videos.db')
+    body = request.json
+    
+    c = conn.cursor()
+    # Insert a row of data
+    c.execute("INSERT INTO videos VALUES (?,?,?,?)", (body["nombre"], body["calificacion"], body["duracion"], body["año"]))
+
+    conn.commit()
+    return {"respuestas": "oky"}
+
+
+@app.route('/videos/<nombre>', methods=['DELETE'])
+def borrar_videos(nombre):
+    
+    conn = sqlite3.connect('videos.db')
+
+    c = conn.cursor()
+    # Insert a row of data
+    c.execute("DELETE FROM videos where nombre=?", [nombre])
+    conn.commit()
+    return {"respuesta": "ok"}
+
+
 app.run(debug=True)
+
