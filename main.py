@@ -1,7 +1,6 @@
 from flask import Flask, request
 import sqlite3
 
-conn = sqlite3.connect('pelicula.db')
 conn = sqlite3.connect('canciones.db')
 app = Flask(__name__)
 
