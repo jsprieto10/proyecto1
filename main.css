@@ -1,6 +1,14 @@
 body {
     max-width: 500px;
     margin: auto;
-    font-size: 10px;
-    color: rgb(10, 10, 56);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(186, 186, 202);
+    background-color:rgb(110, 67, 67);
+}
+
+/* ********************************* */
+
+div {
+    display:inline-block;
+    vertical-align:middle;
 }
