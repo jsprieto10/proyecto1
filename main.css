@@ -1,14 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+}
 body {
-    max-width: 500px;
-    margin: auto;
+    font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(186, 186, 202);
     background-color:rgb(110, 67, 67);
+}
+
+header{
+color: white;
+}
+
+#main-conteiner header #menu{
+    padding: 50px 0;
+}
+
+header #menu ul{
+    margin: 0;
+    padding: 0;
+}
+
+header #menu ul #logo{
+    margin-right: 40%;
+    margin-left: 100px;
+}
+/* ********************************* */
+
+#main-container header main{
+    margin: 0 auto;
+    width: 500px;
+}
+
+#main-container header div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#main-container header main .text h1{
+    font-size: 80p;
+}
+
+#main-container header main .text p{
+    font-size: 24px;
+    padding: 20px 0;
+}
+
+button{
+    background-color: rgb(230, 212, 222);
+    border: 0;
+    border-radius: 3px;
+    color: rgb(20, 20, 20);
+    cursor: pointer;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 20px 25px;
+    margin: 40px 0px;
+}
+
+button:hover{
+    background-color:rgb(223, 156, 223);
+}
+
+#main-container header main .imagen{
+    text-align: right;
+    width: 500%;
 }
 
 /* ********************************* */
 
-div {
-    display:inline-block;
-    vertical-align:middle;
+.layout{
+    width: 1280px;
+    margin: 250px auto;
+}
+
+.layout div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.layout h3{
+    font-size: 48px;
+    padding: 25px 0;
+}
+
+.layout p{
+    padding: 25px 0;
+    line-height: 32px;
+}
+
+.layout-left .text{
+    width: 500px;
+}
+
+footer{
+    background-color:black;
+    padding: 20px 20px;
+    color:white;
 }

@@ -1,0 +1,12 @@
+ 
+max-width: 500px;
+margin: auto;
+
+width="120%" height="90%";
+
+para colocar las cosas en una misma linea y con espacios
+display: inline-block;
+padding: 10px;
+vertical-aling: middle;
+
+font-size: 18px
