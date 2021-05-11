@@ -1,18 +1,23 @@
 *{
+    
     padding: 0;
     margin: 0;
 }
-body {
+body{
+    background-color: white;
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
     font-size: 18px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:rgb(110, 67, 67);
 }
 
 header{
-color: white;
+    background-image: url(../img/banner.png);
+    background-size: 150% 100%;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 10px 10px;
 }
 
-#main-conteiner header #menu{
+header #menu{
     padding: 50px 0;
 }
 
@@ -21,80 +26,119 @@ header #menu ul{
     padding: 0;
 }
 
+header #menu ul li{
+    display: inline-block;
+    padding: 10px;
+    vertical-align: middle;
+}
+
+header #menu ul li a{
+    display: inline-block;
+}
+
+header #menu ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+header #menu ul li a:hover{
+    color: black;
+    text-decoration: underline;
+}
+
 header #menu ul #logo{
     margin-right: 40%;
     margin-left: 100px;
 }
-/* ********************************* */
 
+/***************************/
 #main-container header main{
     margin: 0 auto;
-    width: 500px;
+    width: 1400px;
 }
-
-#main-container header div{
+#main-container header main div{
     display: inline-block;
     vertical-align: middle;
 }
 
-#main-container header main .text h1{
-    font-size: 80p;
+#main-container header main .text h1{   
+    font-size: 50px;
+    margin: 5px 30px;
 }
 
-#main-container header main .text p{
+#main-container header main .text p{   
     font-size: 24px;
-    padding: 20px 0;
+    padding: 10px 0;
+    margin: 5px 30px;
 }
 
 button{
-    background-color: rgb(230, 212, 222);
+    background: #24d9e6;
     border: 0;
-    border-radius: 3px;
-    color: rgb(20, 20, 20);
+    border-radius:  13px;
+    color: white;
     cursor: pointer;
     font-size: 24px;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 20px 25px;
-    margin: 40px 0px;
+    margin: 5px 30px;
 }
 
 button:hover{
-    background-color:rgb(223, 156, 223);
+    background: #14929b;
 }
 
-#main-container header main .imagen{
-    text-align: right;
-    width: 500%;
+#main-container header main .image{   
+    width: 500px;
 }
 
-/* ********************************* */
+
+/********************************************/
+
 
 .layout{
     width: 1280px;
     margin: 250px auto;
 }
 
-.layout div{
+#main-container .section .layout div{
     display: inline-block;
     vertical-align: middle;
 }
 
-.layout h3{
-    font-size: 30px;
-    padding: 20px 0;
+#main-container .section .layout h3{
+    font-size: 48px;
+    padding: 25px 0;
 }
 
-.layout p{
-    padding: 20px 0;
+#main-container .section .layout p{
+    padding: 25px 0;
     line-height: 32px;
 }
 
-.layout-left .text{
+#main-container .section .layout-left .text{
     width: 500px;
 }
 
+#main-container .section .layout-left .image{
+    width: 770px;
+    text-align: right;
+}
+
+#main-container .section .layout-right .text{
+    width: 500px;
+}
+
+#main-container .section .layout-right .image{
+    width: 770px;
+    text-align: center;
+}
+
+
+
+
 footer{
-    background-color:black;
-    padding: 20px 20px;
-    color:white;
+    background-color: black;
+    color: white;
+    padding: 150px 20px;
+    text-align: center;
 }
