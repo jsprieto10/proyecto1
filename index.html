@@ -2,7 +2,8 @@
 <html>
 <head>
   <title>My App</title>
-  <link rel="stylesheet" href="main.css"> 
+  <link rel="stylesheet" href="main.css">
+  <meta charset="utf-8"/>
 </head>
 <body>
 
@@ -12,7 +13,7 @@
         <ul>
           <li id="logo">
             <a href="#">
-              <img src="https://img.icons8.com/dusk/2x/zoom.png" width="6%" height="6%"/>
+              <img src="https://img.icons8.com/dusk/2x/zoom.png" width="60%" height="60%"/>
             </a>
           </li>
         </ul>
@@ -50,12 +51,9 @@
             <label for="duracion">Duracion</label>
             <input type="number" id="duracion" name="duracion" placeholder="120"><br/>
             <label for="año">Año</label>
-            <input type="number" id="año" nombre="año" min="1900" max="2099" placeholder="2015" step="1"/><br>
-            <input type="color"><br>
-            <input type="radio"><br>
-            <input type="time">
+            <input type="number" id="anio" nombre="año" min="1900" max="2099" placeholder="2015" step="1"/><br>
              <br/>
-             <button>Crear pelicula</button>
+             <button id="btn-create">Crear pelicula</button>
          </form>
       </div>
 
@@ -75,4 +73,5 @@
 
     </div>
 </body>
+<script src="main.js"></script>
 </html>

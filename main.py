@@ -1,8 +1,11 @@
 from flask import Flask, request
 import sqlite3
+from flask_cors import CORS
+
+app = Flask(__name__)
+CORS(app)
 
 conn = sqlite3.connect('canciones.db')
-app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
@@ -30,7 +33,6 @@ def crear_pelicula():
     
     conn = sqlite3.connect('peliculas.db')
     body = request.json
-    
     c = conn.cursor()
     # Insert a row of data
     c.execute("INSERT INTO pelicula VALUES (?,?,?,?)", (body["nombre"], body["calificacion"], body["duracion"], body["año"]))
