@@ -142,3 +142,23 @@ footer{
     padding: 150px 20px;
     text-align: center;
 }
+
+div#peliculas{
+display: flex;
+  justify-content: center;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
