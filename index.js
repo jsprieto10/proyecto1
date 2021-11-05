@@ -39,13 +39,22 @@ function mostrar_peliculas(){
       return response.json();
   }).then(function (response){
       var div = document.getElementById("peliculas");
-      var ul = document.createElement("ul");
-      div.append(ul);
-      console.log(ul);
+      var tabla = document.createElement("table");
+      div.append(tabla);
+      console.log(tabla);
       for(var pelicula of response.resultado){
-        var li = document.createElement("li");
-        li.innerText = pelicula.nombre;
-        ul.append(li);
+        <table>
+          <tr>
+          <td>Nombre</td>
+          <td>Calificación</td>
+          <td>Duración</td>
+          <td>Año</td>
+        </tr>
+        </table>
+        var td = document.createElement("td");
+        td.innerText = pelicula.nombre;
+
+        tabla.append(tr);
       }
   })
 }
@@ -56,3 +65,18 @@ mostrar_peliculas();
 //opciones para hacer prueva 
 // alert.
 //log.
+
+//<table>
+//<tr>
+//<th>Nombre</th>
+//<th>Calificación</th>
+//<th>Duración</th>
+//<th>Año</th>
+//</tr>
+//<tr>
+//<td>Up, una aventura del altura</td>
+//<td>5</td>
+//<td>136</td>
+//<td>2009</td>
+//</tr>
+//</table>
