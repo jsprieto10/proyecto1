@@ -38,22 +38,29 @@ function mostrar_peliculas(){
   .then(function (response) {
       return response.json();
   }).then(function (response){
-      var div = document.getElementById("peliculas");
-      var tabla = document.createElement("table");
-      div.append(tabla);
+      var tabla = document.getElementById("peliculas");
       console.log(tabla);
       for(var pelicula of response.resultado){
-        <table>
-          <tr>
-          <td>Nombre</td>
-          <td>Calificación</td>
-          <td>Duración</td>
-          <td>Año</td>
-        </tr>
-        </table>
-        var td = document.createElement("td");
-        td.innerText = pelicula.nombre;
 
+        var tr = document.createElement("tr")
+
+        var tdNombre = document.createElement("td");
+        tdNombre.innerText = pelicula.nombre;
+
+        var tdCalificacion = document.createElement("td");
+        tdCalificacion.innerText = pelicula.calificacion;
+
+        var tdDuracion = document.createElement("td");
+        tdDuracion.innerText = pelicula.duracion;
+
+        var tdAnio = document.createElement("td");
+        tdAnio.innerText = pelicula.año;
+
+        tr.append(tdNombre)
+        tr.append(tdCalificacion)
+        tr.append(tdDuracion)
+        tr.append(tdAnio)
+        
         tabla.append(tr);
       }
   })
@@ -62,21 +69,18 @@ function mostrar_peliculas(){
 mostrar_peliculas();
 
 
-//opciones para hacer prueva 
-// alert.
-//log.
 
-//<table>
-//<tr>
-//<th>Nombre</th>
-//<th>Calificación</th>
-//<th>Duración</th>
-//<th>Año</th>
-//</tr>
-//<tr>
-//<td>Up, una aventura del altura</td>
-//<td>5</td>
-//<td>136</td>
-//<td>2009</td>
-//</tr>
-//</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+//otros
